@@ -45,12 +45,12 @@
   in
     {
       nixosModules = {
-
         orangepi5plus = throw "'nixosModules.orangepi5plus' has been renamed to 'nixosModules.boards.orangepi5plus'";
         orangepi5b = throw "'nixosModules.orangepi5b' has been renamed to 'nixosModules.boards.orangepi5b'";
+        orangepi5pro = throw "'nixosModules.orangepi5pro' has been renamed to 'nixosModules.boards.orangepi5pro'";
         orangepi5 = throw "'nixosModules.orangepi5' has been renamed to 'nixosModules.boards.orangepi5'";
         rock5a = throw "'nixosModules.rock5a' has been renamed to 'nixosModules.boards.rock5a'";
-      
+
         boards = {
           # Orange Pi 5 SBC
           orangepi5 = {
@@ -61,6 +61,11 @@
           orangepi5b = {
             core = import ./modules/boards/orangepi5b.nix;
             sd-image = ./modules/sd-image/orangepi5b.nix;
+          };
+          # Orange Pi 5 Pro SBC
+          orangepi5Pro = {
+            core = import ./modules/boards/orangepi5pro.nix;
+            sd-image = ./modules/sd-image/orangepi5pro.nix;
           };
           # Orange Pi 5 Plus SBC
           orangepi5plus = {
