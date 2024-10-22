@@ -63,7 +63,7 @@
             sd-image = ./modules/sd-image/orangepi5b.nix;
           };
           # Orange Pi 5 Pro SBC
-          orangepi5Pro = {
+          orangepi5pro = {
             core = import ./modules/boards/orangepi5pro.nix;
             sd-image = ./modules/sd-image/orangepi5pro.nix;
           };
